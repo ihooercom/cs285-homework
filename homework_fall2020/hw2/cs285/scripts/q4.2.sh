@@ -1,0 +1,7 @@
+export PYTHONPATH=homework_fall2020/hw2/:$PYTHONPATH
+/home/amax/anaconda3/envs/allennlp-v1.1/bin/python homework_fall2020/hw2/cs285/scripts/run_hw2.py --env_name HalfCheetah-v2 --ep_len 150 --which_gpu 0 --discount 0.95 -n 100 --num_agent_train_steps_per_iter 3 -l 2 -s 32 -b 40000 -lr 0.02 --exp_name q4_b40000_r0.02  >log 2>&1 &
+/home/amax/anaconda3/envs/allennlp-v1.1/bin/python homework_fall2020/hw2/cs285/scripts/run_hw2.py --env_name HalfCheetah-v2 --ep_len 150 --which_gpu 0 --discount 0.95 -n 100 --num_agent_train_steps_per_iter 3 -l 2 -s 32 -b 40000 -lr 0.02 -rtg --exp_name q4_b40000_r0.02_rtg  >log 2>&1 &
+/home/amax/anaconda3/envs/allennlp-v1.1/bin/python homework_fall2020/hw2/cs285/scripts/run_hw2.py --env_name HalfCheetah-v2 --ep_len 150 --which_gpu 1 --discount 0.95 -n 100 --num_agent_train_steps_per_iter 3 -l 2 -s 32 -b 40000 -lr 0.02 --nn_baseline --exp_name q4_b40000_r0.02_nnbaseline  >log 2>&1 &
+/home/amax/anaconda3/envs/allennlp-v1.1/bin/python homework_fall2020/hw2/cs285/scripts/run_hw2.py --env_name HalfCheetah-v2 --ep_len 150 --which_gpu 1 --discount 0.95 -n 100 --num_agent_train_steps_per_iter 3 -l 2 -s 32 -b 40000 -lr 0.02 -rtg --nn_baseline --exp_name q4_b40000_r0.02_rtg_nnbaseline  >log 2>&1 &
+wait
+echo "done!"
